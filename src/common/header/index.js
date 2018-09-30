@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {HeaderWrapper, Logo, Nav, NavItem, Addition} from './style';
+import {HeaderWrapper, Logo, Nav, NavItem, Addition, NavSearch, Button} from './style';
 
 class Header extends Component{
     render(){
