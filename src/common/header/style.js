@@ -76,7 +76,7 @@ export const Button=styled.div`
     line-height: 38px;
     margin-top: 9px;
     margin-right: 20px;
-    padding: 20px;
+    padding: 0 20px;
     border-radius: 19px;
     border: 1px solid #ec6149;
     font-size: 14px;
