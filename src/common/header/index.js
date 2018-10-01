@@ -2,7 +2,32 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {CSSTransition} from 'react-transition-group';
 import {actionCreators}  from './store';
-import {HeaderWrapper, Logo, Nav, NavItem, Addition, NavSearch, Button, SearchWrapper} from './style';
+import {HeaderWrapper, Logo, Nav, NavItem, Addition, NavSearch, Button, SearchWrapper, SearchInfo, SearchInfoTitle,SearchInfoSwitch,SearchInfoItem, SearchInfoList} from './style';
+
+const getListArea=(show)=>{
+    if(show){
+        return (
+            <SearchInfo >
+            <SearchInfoTitle>
+                Hot Topic
+                <SearchInfoSwitch>
+                    Switch
+                </SearchInfoSwitch>
+            </SearchInfoTitle>
+            <SearchInfoList>
+                <SearchInfoItem>Education</SearchInfoItem>    
+                <SearchInfoItem>Education</SearchInfoItem>
+                <SearchInfoItem>Education</SearchInfoItem>
+                <SearchInfoItem>Education</SearchInfoItem>
+                <SearchInfoItem>Education</SearchInfoItem>
+            </SearchInfoList>
+            </SearchInfo>                        
+        )
+    }else{
+       return null; 
+    }
+}
+
 
 const Header=(props)=>{
     return (
@@ -28,10 +53,8 @@ const Header=(props)=>{
                             ></NavSearch>
                             </div>
                         </CSSTransition>
-                            <i className={props.focused?'focused iconfont':'iconfont'}>&#xe614;</i>
-                        <SearchInfo>
-                            
-                        </SearchInfo>
+                            <i className={props.focused?'focused iconfont':'iconfont'}>&#xe614;</i>                        
+                        {getListArea(props.focused)}
                     </SearchWrapper>
                 </Nav>
                 <Addition>
