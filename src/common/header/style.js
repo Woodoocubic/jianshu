@@ -66,6 +66,8 @@ export const NavSearch=styled.input.attrs({
         width: 240px;
     }
 
+ 
+
 
 `;
 
@@ -97,20 +99,6 @@ export const Button=styled.div`
 export const SearchWrapper=styled.div`
     position:relative;
     float: left;
-    .slide-enter{
-        transition: all .2s ease-out;
-    }
-    .slide-enter-active{
-        width:240px;
-    }
-    .slide-exit{
-        transition: all .2s ease-out;
-    }
-    .slide-exit-active{
-        width:160px;
-    }
-
-
     .iconfont{
         position:absolute;
         right: 5px;
@@ -125,7 +113,18 @@ export const SearchWrapper=styled.div`
         }
     
     }
-
+    .slide-enter{
+        transition: all .2s ease-out;
+    }
+    .slide-enter-active{
+        width:240px;
+    }
+    .slide-exit{
+        transition: all .2s ease-out;
+    }
+    .slide-exit-active{
+        width:160px;
+    }
 `;
 
 
