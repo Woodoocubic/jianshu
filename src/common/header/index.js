@@ -26,9 +26,12 @@ const Header=(props)=>{
                                 onFocus={props.handleInputFocus}
                                 onBlur={props.handleInputBlur}
                             ></NavSearch>
-                            <i className={props.focused?'focused iconfont':'iconfont'}>&#xe614;</i>
-                        </div>
+                            </div>
                         </CSSTransition>
+                            <i className={props.focused?'focused iconfont':'iconfont'}>&#xe614;</i>
+                        <SearchInfo>
+                            
+                        </SearchInfo>
                     </SearchWrapper>
                 </Nav>
                 <Addition>
@@ -44,7 +47,8 @@ const Header=(props)=>{
 
 const mapStateToProps=(state)=>{
     return {
-        focused: state.header.get('focused')
+        focused: state.getIn(['header','focused'])
+        // state.get('header').get('focused')
     }
 }
 
