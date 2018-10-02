@@ -10,10 +10,7 @@ export const searchBlur=()=>({
     type:constants.SEARCH_BLUR
 });
 
-const changeList=(data)=>({
-    type:constants.CHANGE_LIST,
-    data: fromJS(data)
-})
+
 
 export const getList=()=>{
     return (dispatch)=>{
@@ -24,4 +21,8 @@ export const getList=()=>{
             console.log('error');
         })       
     }
-}
+};
+const changeList=(data)=>({
+    type:constants.CHANGE_LIST,
+    data: fromJS(data)
+});
