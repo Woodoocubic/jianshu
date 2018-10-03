@@ -5,8 +5,6 @@ import {connect} from 'react-redux';
 class Topic extends Component {
     render (){
         const {list}=this.props;
-
-
         return (
             <TopicWrapper>
                 {
@@ -15,7 +13,8 @@ class Topic extends Component {
                             <TopicItem key={item.get('id')}>
                                 <img 
                                     className='topic-pic'
-                                    src={item.get('imgUrl')} />
+                                    src={item.get('imgUrl')} 
+                                    alt='this' />
                                 {item.get('title')} 
                             </TopicItem>
                         )
@@ -27,7 +26,7 @@ class Topic extends Component {
 }
 
 const mapState=(state)=>({
-    list: state.get('home').get('topicList')
+    list: state.getIn(['home', 'topicList'])
 });
 
 export default connect(mapState, null)(Topic);
