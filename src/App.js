@@ -9,16 +9,14 @@ import Detail from './pages/detail';
 class App extends Component {
   render() {
     return (
-      <Provider store={store}>
-        <div>
-        <Header />
+      <Provider store={store}>       
         <BrowserRouter>
         <div>
+          <Header />
           <Route path='/' exact component={Home}></Route>
           <Route path='/detail' exact component={Detail}></Route>
           </div>
         </BrowserRouter>
-        </div>
       </Provider>
     );
   }

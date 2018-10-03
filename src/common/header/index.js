@@ -4,6 +4,7 @@ import {CSSTransition} from 'react-transition-group';
 import {actionCreators}  from './store';
 import {HeaderWrapper, Logo, Nav, NavItem, Addition, NavSearch, Button, SearchWrapper, SearchInfo, 
         SearchInfoTitle,SearchInfoSwitch,SearchInfoItem, SearchInfoList} from './style';
+import {Link} from 'react-router-dom';
 
 class Header extends Component{
     getListArea=()=>{
@@ -51,7 +52,9 @@ class Header extends Component{
         const {focused, handleInputFocus, handleInputBlur, list}=this.props;
         return (
                     <HeaderWrapper>
+                        <Link to='/'>
                         <Logo />
+                        </Link>
                             <Nav>
                                 <NavItem className="left active " >Home</NavItem>
                                 <NavItem className="left">Download App</NavItem>

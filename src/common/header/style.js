@@ -7,18 +7,16 @@ export const HeaderWrapper=styled.div`
     border-bottom: 1px solid #f0f0f0;
 `;
 
-export const Logo=styled.a.attrs({
-    href:'/'
-})`
-position: absolute;
-top: 0;
-left: 0;
-display: block;
-height: 56px;
-width: 100px;
-border-bottom: 1px solid #f0f0f0;
-background: url(${logoPic});
-background-size: contain;
+export const Logo=styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 56px;
+    width: 100px;
+    border-bottom: 1px solid #f0f0f0;
+    background: url(${logoPic});
+    background-size: contain;
 `;
 
 export const Nav=styled.div`
