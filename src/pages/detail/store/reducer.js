@@ -2,12 +2,17 @@ import {fromJS} from 'immutable';
 import * as constants from './constants'
 
 const defaultState=fromJS({
-    title: '这16个App，让你生活效率刷其他人10条街',
-    content: '<img src="//upload-images.jianshu.io/upload_images/1359662-033997f7649df99a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" /><p>简书上面有非常           多的专题，<b>从摄影，美食，生活到互联网IT等等</b>，里面有很多优秀的内<b>容创作者和行业专业人士</b>分享到干货内容或是生活随笔等，这些内容对许多读者来说非常有帮助。除此之外，我们           自己也可以在上面分享一些有价值的内容，收获别人的喜欢和评论。简书官方也经常举办<b>各种交友活动，可以认识很多有趣的人，哈哈~</b></p><p>简书上面有非常多的专题，<b>从摄影，美食，             生活到互联网IT等等</b>，里面有很多优秀的内<b>容创作者和行业专业人士</b>分享到干货内容或是生活随笔等，这些内容对许多读者来说非常有帮助。除此之外，我们自己也可以在上面分享一些有            价值的内容，收获别人的喜欢和评论。简书官方也经常举办<b>各种交友活动，可以认识很多有趣的人，哈哈~</b></p><p>简书上面有非常多的专题，<b>从摄影，美食，生活到互联网IT等等</b>，里            面有很多优秀的内<b>容创作者和行业专业人士</b>分享到干货内容或是生活随笔等，这些内容对许多读者来说非常有帮助。除此之外，我们自己也可以在上面分享一些有价值的内容，收获别人的喜欢             和评论。简书官方也经常举办<b>各种交友活动，可以认识很多有趣的人，哈哈~</b></p><p>简书上面有非常多的专题，<b>从摄影，美食，生活到互联网IT等等</b>，里面有很多优秀的内<b>容创作者           和行业专业人士</b>分享到干货内容或是生活随笔等，这些内容对许多读者来说非常有帮助。除此之外，我们自己也可以在上面分享一些有价值的内容，收获别人的喜欢和评论。简书官方也经常举办<b>           各种交友活动，可以认识很多有趣的人，哈哈~</b></p>' 
+    title: '',
+    content: '' 
 })
 
 export default (state=defaultState, action)=>{
     switch (action.type){
+        case constants.CHANGE_DETAIL:
+            return state.merge({
+                title: action.title,
+                content: action.content
+            })
 
         default:
             return state;
